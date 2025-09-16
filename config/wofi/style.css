@@ -1,0 +1,52 @@
+window {
+margin: 0;
+border-radius: 0px;
+border: solid 0px;
+border-color: #080808
+padding: 0;
+background-color: #080808
+color: #000000;
+font-family: "Cantarell";
+font-size: 15px;
+}
+
+#input {
+margin: 8px;
+padding: 6px;
+border: none;
+border-radius: 10px;
+background-color: rgba(0,0,0,0.1);
+color: #ffffff;
+}
+
+#entry {
+padding: 8px;
+margin: 4px;
+border-radius: 5px;
+border-color: transparent;
+border: solid 2px;
+border-color: transparent;
+color: #ffffff;
+}
+
+#entry:selected {
+background-color: #151719;
+border: solid 2px;
+border-color: transparent;
+color: #080808;
+}
+
+#outer-box, #inner-box, #scroll {
+margin: 0;
+padding: 0;
+background-color: #080808;
+}
+
+#img {
+margin-right: 8px;
+}
+
+image, label {
+background-color:transparent;
+box-shadow: none;
+}

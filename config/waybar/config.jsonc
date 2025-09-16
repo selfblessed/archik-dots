@@ -1,0 +1,109 @@
+// -*- mode: jsonc -*-
+{
+  "output":"DP-3",
+	"height": 25,
+	"width": 1910,
+	"margin-top": 3,
+
+	"modules-left": ["hyprland/workspaces","custom/media","custom/weather"],
+	"modules-center": ["clock"],
+	"modules-right": ["tray", "hyprland/language", "pulseaudio","custom/power"],
+
+	"custom/menu": {
+		"format": "{icon}",
+		"format-icons": "",
+		"on-click": "rofi -show drun -theme $HOME/.config/rofi/launchers/type-6/style-1.rasi -icon-theme Tela-circle-black",
+		"escape": true,
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"on-click": "activate",
+		"tooltip": false,
+	},
+
+  "custom/media": {
+       "format": "{icon} {text}",
+       "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "<span foreground='#a0a0a0'> </span>",
+        },
+        "escape": true,
+        //"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
+        "on-click": "playerctl play-pause",
+    },
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": false,
+	},
+
+	"custom/weather": {
+		"format": "{}",
+		"interval": 300,
+		"exec": "~/.config/waybar/weather.sh",
+		"tooltip": false
+	},
+
+	"custom/foot": {
+		"format": "<span color='#ddeeff'></span>",
+		"on-click": "exec kitty --title=home",
+		"tooltip": false
+	},
+
+
+
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10,
+	},
+
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "en",
+		"format-ru": "ru",
+	},
+    
+	"pulseaudio": {
+		"scroll-step": 2,
+		"format": "{volume}%",
+		"on-click": "pavucontrol",
+		"tooltip": false
+	},
+
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip-format": "<big><span color='#cdd6f4'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "<span color='#cdd6f4'>{:%Y-%m-%d}</span>",
+
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#cdd6f4'><b>{}</b></span>",
+                              "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+                              "weeks":      "<span color='#f5c2e7'><b>W{}</b></span>", "weekdays":   "<span color='#f5c2e7'><b>{}</b></span>", "today":      "<span color='#eba0ac'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+		},
+
+	"custom/power": {
+		"format": "{icon}",
+		"format-icons": "",
+		"on-click": "~/.config/rofi/powermenu.sh",
+		"escape": true,
+		"tooltip": false
+	},
+	}
+}

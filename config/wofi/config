@@ -1,0 +1,9 @@
+location=center
+width=350
+height=500
+show=drun
+allow_markup=true
+prompt=Search:
+normal_window=false
+allow_images=true
+term=foot
