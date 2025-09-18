@@ -67,8 +67,8 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0px 3px;
-	margin: 0 2px;
+	padding: 0px 12px;
+	margin: 0 3px;
 	background-color: @bg3;
 	color: #a0a0a0;
 	border: none;
@@ -79,7 +79,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	background-color: #3a3d4a;
+  background-color: #3a3d4a;
 	color: #d0d0d0;
 }
 
@@ -217,10 +217,4 @@ window#waybar {
 	color: @red;
 }
 
-tooltip {
-	background: @bg;
-	margin: 20px;
-	padding: 15px;
-	border: 20px solid rgba(100, 114, 125, 0);
-	border-radius: 10px;
-}
+

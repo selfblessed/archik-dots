@@ -1,10 +1,7 @@
 # 🖼️ Screenshots
-
-
-
-![Screenshot 1](screenshots/image_2025-09-16_15-14-32.png)  
-![Screenshot 2](screenshots/image_2025-09-16_15-14-53.png)  
-![Screenshot 3](screenshots/image_2025-09-16_15-15-22.png)
+![Screenshot 1](resource/screen1.png)  
+![Screenshot 2](resource/screen2.png)  
+![Screenshot 3](resource/screen3.png)  
 
 ---
 

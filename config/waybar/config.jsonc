@@ -7,7 +7,7 @@
 
 	"modules-left": ["hyprland/workspaces","custom/media","custom/weather"],
 	"modules-center": ["clock"],
-	"modules-right": ["tray", "hyprland/language", "pulseaudio","custom/power"],
+	"modules-right": ["tray", "hyprland/language", "pulseaudio"],
 
 	"custom/menu": {
 		"format": "{icon}",
@@ -18,11 +18,15 @@
 	},
 
 	"hyprland/workspaces": {
-		"format": "{name}",
+		"format": "{icon}",
 		"on-click": "activate",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+			},
 		"tooltip": false,
 	},
-
   "custom/media": {
        "format": "{icon} {text}",
        "return-type": "json",
@@ -74,7 +78,7 @@
 	},
 
 	"clock": {
-		"format": "{:%H:%M}",
+		"format": "{:%B %d - %H:%M}",
 		"tooltip-format": "<big><span color='#cdd6f4'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
 		"format-alt": "<span color='#cdd6f4'>{:%Y-%m-%d}</span>",
 
